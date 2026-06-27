@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "WiFi"
+rootProject.name = "Fix"
 include(":app")

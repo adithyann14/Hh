@@ -33,7 +33,7 @@ class WifiTileService : TileService() {
                     withContext(Dispatchers.IO) {
                         RootShell.exec("settings put secure location_mode 3")
                     }
-                    delay(1000L)
+                    delay(1_500L)
                     withContext(Dispatchers.IO) {
                         RootShell.exec("svc wifi enable")
                     }
