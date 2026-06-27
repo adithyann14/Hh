@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--
-        No permissions needed — location and WiFi are toggled via root
-        shell commands (su -c), which bypass Android's permission model.
-        No INTERNET, no ACCESS_FINE_LOCATION, nothing.
-    -->
-
     <application
         android:allowBackup="false"
         android:label="@string/app_name">
 
-        <!--
-            No <activity> — no launcher icon, no app drawer entry.
-            Add the tile via: Settings → Quick Settings → Edit → drag in "WI-FI".
-        -->
+        <!-- No <activity> — no launcher icon, no app drawer entry -->
 
         <service
             android:name=".WifiTileService"
             android:exported="true"
+            android:icon="@drawable/ic_wifi"
+            android:label="@string/tile_label"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
